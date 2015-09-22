@@ -1,17 +1,17 @@
 require(dplyr)
 
 run_analysis <- function(debug = FALSE) {
-	training_data <- read.table("./UCI HAR Dataset/train/X_train.txt", header = FALSE)
-	testing_data <- read.table("./UCI HAR Dataset/test/X_test.txt", header = FALSE)
+	training_data <- read.table("./data/train/X_train.txt", header = FALSE)
+	testing_data <- read.table("./data/test/X_test.txt", header = FALSE)
 	
 	#get list of all measurements for colnames
-	measurement_labs <- read.table("./UCI HAR Dataset/features.txt", stringsAsFactors = FALSE)$V2
+	measurement_labs <- read.table("./data/features.txt", stringsAsFactors = FALSE)$V2
 	
 	colnames(training_data) <- measurement_labs
 	colnames(testing_data) <- measurement_labs
 
-	training_subjects <- read.table("./UCI HAR Dataset/train/subject_train.txt")
-	testing_subjects <- read.table("./UCI HAR Dataset/test/subject_test.txt")
+	training_subjects <- read.table("./data/train/subject_train.txt")
+	testing_subjects <- read.table("./data/test/subject_test.txt")
 
 	testing_data$Subject_ID <- testing_subjects$V1
 	testing_data <- testing_data[,c(562,1:561)]
@@ -20,10 +20,9 @@ run_analysis <- function(debug = FALSE) {
 	training_data <- training_data[,c(562,1:561)]
 	
 	#Add activity labels to each dataset
-	activity.labels <- c(Walking=1,`Walking Up`=2,`Walking Down`=3,Sitting=4,Standing=5,Laying=6)
 
-	testing_data$Activity <- read.table("./UCI HAR Dataset/test/y_test.txt")$V1
-	training_data$Activity <- read.table("./UCI HAR Dataset/train/y_train.txt")$V1
+	testing_data$Activity <- read.table("./data/test/y_test.txt")$V1
+	training_data$Activity <- read.table("./data/train/y_train.txt")$V1
 
 	activity_code <- c(Walking=1,`Walking Up`=2,`Walking Down`=3,Sitting=4,Standing=5,Laying=6)
 	testing_data$Activity <- names(activity_code)[match(testing_data$Activity,activity_code)]
