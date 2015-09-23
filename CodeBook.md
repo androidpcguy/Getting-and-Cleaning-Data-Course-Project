@@ -5,19 +5,15 @@ The features selected for this database come from the accelerometer and gyroscop
 c-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant ra
 te of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter wi
 th a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated int
-o body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterw
-orth filter with a corner frequency of 0.3 Hz. 
+o body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signa
-ls (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were c
-alculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyro
+ls (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyro
 JerkMag). 
 
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBody
-AccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate fr
-equency domain signals). 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBody AccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
-These signals were used to estimate variables of the feature vector for each pattern:  
+These signals were used to estimate variables of the feature vector for each pattern:
 `-XYZ` is used to denote 3-axial signals in the X, Y and Z directions.
 
 ##Signals
