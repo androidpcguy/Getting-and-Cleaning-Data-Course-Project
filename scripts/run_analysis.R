@@ -1,5 +1,7 @@
 require(dplyr)
 
+
+#TODO: ADD COMMENTS
 run_analysis <- function(debug = FALSE) {
 	training_data <- read.table("./data/train/X_train.txt", header = FALSE)
 	testing_data <- read.table("./data/test/X_test.txt", header = FALSE)
