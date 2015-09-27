@@ -11,6 +11,10 @@ This repository contains the Samsung Data files provided by UCI as well as a scr
 
 **IMPORTANT**: Data folders `test/` and `train/` must be inside a folder `data/` inside the working directory. `dplyr` package is required to run analysis script.
 
+###How to run script
+Just call `run_analysis()` after sourcing it into current R session. **DO NOT add any arguments, as it is solely for debugging purposes**
+
+
 ###How script works
 1. Respective training and testing datasets are read into data frames using `read.table` command. Files that are read in are `X_train.txt` and `X_test.txt`.
 2. Names of measurements are read in and column names are set for training and testing data frames.

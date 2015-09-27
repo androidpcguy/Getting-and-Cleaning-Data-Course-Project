@@ -9,8 +9,7 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBody AccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
-These signals were used to estimate variables of the feature vector for each pattern:
-`-XYZ` is used to denote 3-axial signals in the X, Y and Z directions.
+These signals were used to estimate variables of the feature vector for each pattern: `-XYZ` is used to denote 3-axial signals in the X, Y and Z directions.
 
 ##Signals
 
@@ -44,7 +43,7 @@ As seen in the aforementioned example, the format of the variables will be `<sig
 
 These functions will be applied to the signals to obtain the variable names used in the output dataset. All other variables originally in the dataset have been omitted.
 
-**Important:** Please note that the values in the dataset are all AVERAGES of the original data that were calculated for each Subject in each Activity he/she participated in.
+**Important:** Please note that the values in the dataset are all AVERAGES of the original data that were calculated for each Subject in each Activity they participated in.
 
 ##Other variables
 - `Subject_ID`: Identification number of each subject in study (starting from 1)
@@ -53,7 +52,7 @@ These functions will be applied to the signals to obtain the variable names used
 There are 6 total values `Activity` can take: ***Walking, Walking Up, Walking Down, Sitting, Standing, Laying***.
 
 ##Format of output data
-Dimensions of the dataset are 180 rows by ***"TODO ?NCOLS?"***
+Dimensions of the dataset are 180 rows by 81 columns.
 
 The output data will be in a wide form. The first column will have the `Subject_ID`, the second column will have `Activity`, and columns starting with column 3 will have variables and their data.
 
