@@ -1,4 +1,4 @@
-# Getting-and-Cleaning-Data-Course-Project
+# README for Course Project
 Course Project for Getting and Cleaning Data class on Coursera
 
 This repository contains the Samsung Data files provided by UCI as well as a script that cleans the datasets and creates one tidy dataset.
